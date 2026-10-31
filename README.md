@@ -30,7 +30,22 @@ bash install.sh project ../my-task # 과제 폴더에 AGENTS.md + .agents/skills
 bash install.sh legacy             # ~/.codex/skills 에 설치 (구버전)
 
 bash vendor.sh                     # 선택: 공개 skill 추가
+bash vendor.sh --design            # 선택: 디자인 skill까지 추가
 ```
+
+### vendor.sh로 받는 공개 skill
+| 묶음 | skill | 원본 | 용도 |
+|---|---|---|---|
+| 기본 | frontend-design | anthropics/skills | 디자인 방향을 정하고 흔한 AI 스타일 피하기 |
+| 기본 | webapp-testing | anthropics/skills | Playwright로 로컬 웹앱 확인 |
+| 기본 | systematic-debugging | obra/superpowers | 원인 중심 디버깅 |
+| 기본 | verification-before-completion | obra/superpowers | 완료 전 실제 검증 |
+| 디자인 | impeccable | pbakaus/impeccable | 디자인 비평·다듬기 (polish, bolder, quieter, audit 등) |
+| 디자인 | ui-ux-pro-max | nextlevelbuilder/ui-ux-pro-max-skill | 제품 유형별 색·폰트·스타일 추천 (Python, 오프라인) |
+| 디자인 | theme-factory | ComposioHQ/awesome-codex-skills | 색·타이포 테마를 CSS 변수로 |
+| kasangyong | plan-eng / build / review / careful | kasangyong/vibe_coding_guide_kasangyong | 설계 → 구현 → 리뷰 역할 분리, 위험 작업 전 확인 |
+
+`bash vendor.sh --all` 로 전부 설치할 수 있다.
 설치 후 Codex를 다시 실행한다.
 
 ## 사용 예
